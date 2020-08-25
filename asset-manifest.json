@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/REACT-Gasto-Semanal/static/css/main.480fbee7.chunk.css",
+    "main.js": "/REACT-Gasto-Semanal/static/js/main.8f043bbf.chunk.js",
+    "main.js.map": "/REACT-Gasto-Semanal/static/js/main.8f043bbf.chunk.js.map",
+    "runtime-main.js": "/REACT-Gasto-Semanal/static/js/runtime-main.e389fb9a.js",
+    "runtime-main.js.map": "/REACT-Gasto-Semanal/static/js/runtime-main.e389fb9a.js.map",
+    "static/js/2.deeab028.chunk.js": "/REACT-Gasto-Semanal/static/js/2.deeab028.chunk.js",
+    "static/js/2.deeab028.chunk.js.map": "/REACT-Gasto-Semanal/static/js/2.deeab028.chunk.js.map",
+    "index.html": "/REACT-Gasto-Semanal/index.html",
+    "precache-manifest.f9e4a6a4f971bb38b5e7dfd5a9cc0469.js": "/REACT-Gasto-Semanal/precache-manifest.f9e4a6a4f971bb38b5e7dfd5a9cc0469.js",
+    "service-worker.js": "/REACT-Gasto-Semanal/service-worker.js",
+    "static/css/main.480fbee7.chunk.css.map": "/REACT-Gasto-Semanal/static/css/main.480fbee7.chunk.css.map",
+    "static/js/2.deeab028.chunk.js.LICENSE.txt": "/REACT-Gasto-Semanal/static/js/2.deeab028.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e389fb9a.js",
+    "static/js/2.deeab028.chunk.js",
+    "static/css/main.480fbee7.chunk.css",
+    "static/js/main.8f043bbf.chunk.js"
+  ]
+}
