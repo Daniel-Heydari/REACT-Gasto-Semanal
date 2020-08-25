@@ -1,43 +1,44 @@
 import React, { Fragment, useState } from 'react';
+import PropTypes from 'prop-types';
 import Error from './Error';
 
+const Pregunta = ({ guardarPresupuesto, guardarRestante, actualizarPregunta }) => {
 
-const Pregunta = ({ guardarPresupuesto,guardarRestante,actualizarPregunta }) => {
-
-  //definir el state
+  // definir el state
   const [ cantidad, guardarCantidad ] = useState(0);
-  const [ error, guardarError ] = useState(false);
+  const [ error, guardarError] = useState(false);
 
-  // Funcion que lee el presupuesto
+  // Función que lee el presupuesto
   const definirPresupuesto = e => {
-    console.log( parseInt(e.target.value) )
-    guardarCantidad(parseInt(e.target.value,10));
+      guardarCantidad( parseInt(e.target.value, 10) )
   }
 
-  //Submit para definir el presuppuesto
+  // Submit para definir el presupuesto
   const agregarPresupuesto = e => {
     e.preventDefault();
 
-    //  Validar
-    if(cantidad < 1 || isNaN(cantidad)) {
+    // Validar
+    if(cantidad < 1 || isNaN( cantidad ) ) {
       guardarError(true);
       return;
     }
 
-  //  Si se pasa la validacion
-  guardarError(false);
-  guardarPresupuesto(cantidad);
-  guardarRestante(cantidad);
-  actualizarPregunta(false);
+    // si se pasa la validación
+    guardarError(false);
+    guardarPresupuesto(cantidad);
+    guardarRestante(cantidad);
+    actualizarPregunta(false);
   }
 
-    return (
-      <Fragment> 
+  return ( 
+    <Fragment>
       <h2>Coloca tu presupuesto</h2>
 
-      { error ? <Error mensaje="El Presupuesto es Incorrecto"/> : null }
+      { error ? <Error mensaje="El Presupuesto es Incorrecto" />  : null }
 
-      <form onSubmit={agregarPresupuesto}>
+      <form
+        onSubmit={agregarPresupuesto}
+      >
         <input
           type="number"
           className="u-full-width"
@@ -45,14 +46,21 @@ const Pregunta = ({ guardarPresupuesto,guardarRestante,actualizarPregunta }) => 
           onChange={definirPresupuesto}
         />
 
-        <input
+        <input 
           type="submit"
           className="button-primary u-full-width"
-          value="Definir Presupuesto" 
+          value="Definir Presupuesto"
         />
       </form>
-      </Fragment>
-    );
+    </Fragment>
+
+  );
+}
+
+Pregunta.propTypes = {
+  guardarPresupuesto: PropTypes.func.isRequired,
+  guardarRestante: PropTypes.func.isRequired,
+  actualizarPregunta: PropTypes.func.isRequired
 }
 
 export default Pregunta;
